@@ -14,19 +14,15 @@ const AddToCart = ({ product }) => {
   const increase = () => {
     setAmount((oldAmount) => {
       let tempAmount = oldAmount + 1;
-      if (tempAmount > stock) {
-        tempAmount = stock;
-      }
+      if (tempAmount > stock) tempAmount = stock;
       return tempAmount;
     });
   };
 
-  const decrese = () => {
+  const decrease = () => {
     setAmount((oldAmount) => {
       let tempAmount = oldAmount - 1;
-      if (tempAmount < 1) {
-        tempAmount = 1;
-      }
+      if (tempAmount < 1) tempAmount = 1;
       return tempAmount;
     });
   };
@@ -51,10 +47,14 @@ const AddToCart = ({ product }) => {
         </div>
       </div>
       <div className="btn-container">
-        <AmountButtons amount={amount} increase={increase} decrease={decrese} />
+        <AmountButtons
+          amount={amount}
+          increase={increase}
+          decrease={decrease}
+        />
         <Link
           to="/cart"
-          className="btn add-to-cart"
+          className="btn"
           onClick={() => addToCart(id, mainColor, amount, product)}
         >
           add to cart
@@ -107,10 +107,6 @@ const Wrapper = styled.section`
   .btn {
     margin-top: 1rem;
     width: 140px;
-  }
-
-  .add-to-cart {
-    text-align: center;
   }
 `;
 export default AddToCart;

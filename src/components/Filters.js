@@ -12,8 +12,8 @@ const Filters = () => {
       company,
       color,
       min_price,
-      price,
       max_price,
+      price,
       shipping,
     },
     updateFilters,
@@ -62,7 +62,7 @@ const Filters = () => {
               })}
             </div>
           </div>
-          {/* end of categories */}
+          {/* end categories */}
           {/* companies */}
           <div className="form-control">
             <h5>company</h5>
@@ -79,7 +79,7 @@ const Filters = () => {
               ))}
             </select>
           </div>
-          {/* end of companies */}
+          {/* end companies */}
           {/* colors */}
           <div className="form-control">
             <h5>colors</h5>
@@ -118,7 +118,7 @@ const Filters = () => {
               })}
             </div>
           </div>
-          {/* end of colors */}
+          {/* end colors */}
           {/* price */}
           <div className="form-control">
             <h5>price</h5>
@@ -132,7 +132,7 @@ const Filters = () => {
               value={price}
             />
           </div>
-          {/* end of price */}
+          {/* end price */}
           {/* shipping */}
           <div className="form-control shipping">
             <label htmlFor="shipping">free shipping</label>
@@ -144,7 +144,7 @@ const Filters = () => {
               checked={shipping}
             />
           </div>
-          {/* end of shipping */}
+          {/* end shipping */}
         </form>
         <button type="button" className="clear-btn" onClick={clearFilters}>
           clear filters

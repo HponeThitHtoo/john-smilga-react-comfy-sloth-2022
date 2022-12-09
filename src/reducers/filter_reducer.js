@@ -71,9 +71,9 @@ const filter_reducer = (state, action) => {
     // filtering
     // text
     if (text) {
-      tempProducts = tempProducts.filter((product) => {
-        return product.name.toLowerCase().startsWith(text);
-      });
+      tempProducts = tempProducts.filter((product) =>
+        product.name.toLowerCase().startsWith(text)
+      );
     }
 
     // category
@@ -123,6 +123,7 @@ const filter_reducer = (state, action) => {
       },
     };
   }
+
   throw new Error(`No Matching "${action.type}" - action type`);
 };
 
